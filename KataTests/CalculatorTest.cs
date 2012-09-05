@@ -25,7 +25,8 @@ namespace KataTests {
             new object[] {new List<int> {1, 1}, 15.2m},
             new object[] {new List<int> {1, 1, 2}, 29.6m},
             new object[] {new List<int> {1, 1, 2, 2, 1}, 46m},
-            new object[] {new List<int> {1, 1, 4, 3}, 65.6m}
+            new object[] {new List<int> {1, 1, 4, 3}, 65.6m},
+            new object[] {new List<int> {3, 3, 3, 3, 3}, 110m}
         };
        
     }
