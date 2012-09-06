@@ -10,24 +10,27 @@ namespace PotterKata {
             int totalNumberOfBooks = bookList.Sum();
             int numberInSet = bookList.Count;
             int remainderBooks = totalNumberOfBooks - numberInSet;
+
+            decimal finalPrice;
+            decimal NonSetBooks = PriceChecker(remainderBooks);
+            decimal PrimarySet = PriceChecker(numberInSet);
+            
             if (remainderBooks > 1) {
-                decimal costOfSecondSet = (remainderBooks * 8) * Discounter(remainderBooks, bookList);
-            }
+                decimal SecondarySet = PriceChecker(remainderBooks);
+                finalPrice = PrimarySet + SecondarySet;
+            } else finalPrice = PrimarySet + NonSetBooks;
             
-            
-            decimal costOfNonDiscountedBooks = remainderBooks * 8;
-            decimal costOfBooksInSet = (bookList.Count * 8) * (Discounts[bookList.Count]);
-            
-            
+
+
             
 
 
 
-            return 0;
+            return finalPrice;
         }
 
-        public decimal Discounter(int set, List<int> bookList) {
-            return Discounts[bookList.Count];
+        public decimal PriceChecker(int numberOfBooks) { 
+            return (numberOfBooks * 8) * Discounts[numberOfBooks];
         }
 
         private Dictionary<int, decimal> Discounts = new Dictionary<int, decimal> {
