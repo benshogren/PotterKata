@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Stephanie\Documents\Visual Studio 2010\Projects\PotterKata\KataTests\bin\Release\KataTests.dll" total="3" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-02" time="12:12:46">
+  <environment nunit-version="2.6.1.12217" clr-version="2.0.50727.4223" os-version="Microsoft Windows NT 6.0.6002 Service Pack 2" platform="Win32NT" cwd="C:\Program Files\NUnit 2.6.1\bin" machine-name="GREGRY" user="Stephanie" user-domain="Gregry" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\Stephanie\Documents\Visual Studio 2010\Projects\PotterKata\KataTests\bin\Release\KataTests.dll" executed="True" result="Failure" success="False" time="0.298" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="KataTests" executed="True" result="Failure" success="False" time="0.257" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="CalculatorTest" executed="True" result="Failure" success="False" time="0.244" asserts="0">
+            <results>
+              <test-case name="KataTests.CalculatorTest.Test1" executed="True" result="Success" success="True" time="0.053" asserts="1" />
+              <test-case name="KataTests.CalculatorTest.Test2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="KataTests.CalculatorTest.Test3" executed="True" result="Failure" success="False" time="0.035" asserts="1">
+                <failure>
+                  <message><![CDATA[  Expected: 7.2m
+  But was:  8m
+]]></message>
+                  <stack-trace><![CDATA[at KataTests.CalculatorTest.Test3() in C:\Users\Stephanie\documents\visual studio 2010\Projects\PotterKata\KataTests\CalculatorTest.cs:line 25
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
