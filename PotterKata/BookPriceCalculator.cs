@@ -36,33 +36,36 @@ namespace PotterKata {
             return set[0];
         }
 
-        public List<List<int>> AllPossibleCombinations(List<int> books, int size) {
+        public List<List<int>> AllPossibleCombinations(List<int> books) {
+            List<List<int>> MasterList = new List<List<int>>();
+            MasterList.Add(new List<int> {books[0]});
+            int length = books.Count;
 
-           
-            List<List<int>> combination = new List<List<int>>();
 
-            //var enumerator = books.GetEnumerator();
             
-            //int actual = enumerator.Current;
-            //enumerator.MoveNext();//maybe switch
-
-
-            //List<int> subSet = new List<int>(books);
-            //subSet.Remove(actual);
-
-            //List<List<int>> subSetCombination = AllPossibleCombinations(subSet, size - 1);
-
-            //foreach (List<int> set in subSetCombination) {
-            //    List<int> newSet = new List<int>(set);
-            //    List<int> ActualZero = new List<int> { 0, actual };
-            //    newSet.AddRange(ActualZero);
-            //    combination.Add(newSet);
+            //for (int i = 1; i <= books.Count; i++){
+            //    MasterList.Add(new List<int> { books[0], books[i] });
             //}
 
-            //combination.AddRange(AllPossibleCombinations(subSet, size));
+            List<int> currentList = new List<int> { books[0] };
+            MasterList.Add(currentList);
+            currentList.Add(books[1]);
+            for (int i = 1; i <= books.Count; i++){
+                MasterList.Add(new List<int> { books[0], books[i] });
+                currentList.Add(books[i]);
+                MasterList.Add(currentList);
+            }
+
+            for (int i = 1; i <= 2; i++) {
+                MasterList.Add(new List<int> { books[0], books[i], books[3] });
+                MasterList.Add(new List<int> { books[0], books[i], books[4] });
+                MasterList.Add(new List<int> { books[0], books[i], books[3], books[4] });
+            }
+
+            MasterList.Add(new List<int> {books[0], books[3], books[4]});
 
 
-            return combination;
+            return MasterList;
         }
 
 

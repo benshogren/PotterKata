@@ -47,10 +47,14 @@ namespace KataTests {
                     new List<int>{2, 3},
                     new List<int>{1, 2, 3}
                 },
-                b.AllPossibleCombinations(new List<int>{1, 2, 3}, 3));
+                b.AllPossibleCombinations(new List<int>{1, 2, 3, 4, 5 }));
         }
 
-
+        [Test]
+        public void TestAPC()
+        {
+            Assert.AreEqual(1, b.AllPossibleCombinations(new List<int>{1, 2, 3, 4, 5}));
+        }
 
     }
 }
